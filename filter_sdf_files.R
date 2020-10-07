@@ -19,7 +19,7 @@ library(rlist)
 mdb = read_sdf("YOUR_PATH_TO_THE_FILE/Your_mixed_file.sdf")
 
 #make two empty list for the two separte categeori you want to divide your files to, if you have 3 categories , make a three empty list
-
+#make the names of the empty as you like #here I made it upon the organism
 ECOLI_MIX = list()
 STAPH_MIX = list()
 
