@@ -5,7 +5,8 @@
 
 install.packages("cinf", repos="http://R-Forge.R-project.org")
 install.packages("conmolfields", repos="http://R-Forge.R-project.org")
-install.packages("rlist")
+install.packages("rlist",repos="http://R-Forge.R-project.org")
+install.packages("gplots",repos="http://R-Forge.R-project.org")
 
 
 #load your libraries
@@ -37,6 +38,33 @@ for (x in mdb) {
 
 
 #export the data into two sdf files one for ecoli and and one for staph
-write_sdf(ECOLI_MIX,"ECOLI_MIX_460.sdf")
-write_sdf(STAPH_MIX,"STAPH_gyrB_209.sdf")
+#change the name as you like
+write_sdf(ECOLI_MIX,"filtered_file_for_staph.sdf") 
+write_sdf(STAPH_MIX,"filtered_file_for_ecoli.sdf")
 
+
+
+#lets cluster our SDF database 
+#there was a probelm in installing ChemmineR and FmcsR due to a bug in rvsg package
+#to install package ("rsvg") in Ubunto 20.04 do not use CRAN repo but in your linux terminal type $ sudo apt-get install -y librsvg2-dev
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("ChemmineR")
+BiocManager::install("fmcsR")
+sdfset <- read.SDFset("your_Path/file.sdf") #change the path accprding 
+apset <- sdf2ap(sdfset) #we need to convert sdf to atom pair dataset
+fpset <- desc2fp(apset) #we need to convert ato,
+
+#creat the distanse between your compunds and save it is .rda file
+dummy <- cmp.cluster(db=apset, cutoff=0, save.distances="distmat.rda", quiet=TRUE) #lets make the 
+load("distmat.rda") 
+
+#plot your dendogram
+simMA <- sapply(cid(fpset), function(x) fpSim(fpset[x], fpset, sorted=FALSE))
+hc <- hclust(as.dist(1-simMA), method="single") 
+plot(as.dendrogram(hc), edgePar=list(col=4, lwd=2), horiz=TRUE) 
+
+#plot your heatmap
+heatmap.2(1-distmat, Rowv=as.dendrogram(hc), Colv=as.dendrogram(hc), 
+          col=colorpanel(40, "darkblue", "yellow", "white"), 
+          density.info="none", trace="none") 
