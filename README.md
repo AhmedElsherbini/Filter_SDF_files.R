@@ -3,7 +3,7 @@
 SDF (Structure Data File) is a chemical-data file that stores structural information and the metadata of the chemical compounds. The file has a wide variety of usages. This simple script is used to divide, filter, and deduplicate SDF based on its metadata. then cluster your filtered data based on their chemical fingerprint 
 steps
 most of the data that come from repo like BindingDB are redundanta and and may contain different species !
-this tool is bulit to helo solve that issue
+this tool is bulit to help solve that issue
 ## Installation
 
 Make sure that you have R 4.0.2 or above and all the libraries!
