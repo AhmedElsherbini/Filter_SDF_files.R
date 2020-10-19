@@ -47,7 +47,7 @@ write_sdf(STAPH_MIX,"filtered_file_for_ecoli.sdf")
 
 #lets cluster our filtered SDF to see how much they are similar
 #there was a probelm in installing ChemmineR and FmcsR due to a bug in rvsg package
-#to install package ("rsvg") in Ubunto 20.04 do not use CRAN repo but in your linux terminal type $ sudo apt-get install -y librsvg2-dev
+#to install package ("rsvg") in Ubunto 18.04 or 20.04 do not use CRAN repo but, in your linux terminal type $ sudo apt-get install -y librsvg2-dev
 #install the packages now without any hassle now
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
