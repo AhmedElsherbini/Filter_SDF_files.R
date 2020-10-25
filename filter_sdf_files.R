@@ -29,6 +29,7 @@ ECOLI_MIX = list()
 STAPH_MIX = list()
 
 #here to loop over the main SDF file, then filter it according to a certain chosen parameter (= organism, s.aureus &eE.coli) 
+#you can change it to any other paramter
 #here also, I use Unique() to remove any duplicates
 
 for (x in mdb) { 
