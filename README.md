@@ -10,13 +10,12 @@ Make sure that you have R 4.0.2 or above and all the libraries!
 ## Usage
 1.Download the R file on your and open in R studio.
 
-2.Modify every path_of_file to your directory path and the names of the files to your file
 
-3.Choose the paramter (in my case it was the bacterial species) you want to filter your data for is present or not (type prop$)
+2.Modify every path_of_file to your directory path and the names of the files to your file.
 
-4. Always print the id list to confirm your data of your data
 
-5.  open the heatmap as pdf and choose the id list in the column.
+3.Choose the paramter (in my case it was the bacterial species) you want to filter your data for is present or not (type prop$).
+
 
 ## Contributing
 Pull requests are very welcome. For major changes, please open an issue first to discuss what you would like to change.
