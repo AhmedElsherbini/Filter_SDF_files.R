@@ -8,7 +8,7 @@ Make sure that you have R 4.0.2 or above and all the libraries!
 
 
 ## Usage
-1.Download the R file on your and open in R studio.
+1.Download the R file on your machine and open it in R studio.
 
 
 2.Modify every path_of_file to your directory path and the names of the files to your file.
