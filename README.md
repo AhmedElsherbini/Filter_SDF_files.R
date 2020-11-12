@@ -11,7 +11,7 @@ Make sure that you have R 4.0.2 or above and all the libraries!
 1.Download the R file on your machine and open it in R studio.
 
 
-2.Modify every path_of_file to your directory path and the names of the files to your file.
+2.Modify every path_of_file to your directory path and the names of the files to your files.
 
 
 3.Choose the paramter (in my case it was the bacterial species) you want to filter your data for is present or not (type prop$).
@@ -20,7 +20,6 @@ Make sure that you have R 4.0.2 or above and all the libraries!
 ## Contributing
 Pull requests are very welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
 the tool is still under development!
 
 Contact me directly on email : drahmedsherbini@yahoo.com
