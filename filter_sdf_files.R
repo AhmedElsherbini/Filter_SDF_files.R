@@ -51,7 +51,7 @@ write_sdf(STAPH_MIX,"example_2.sdf")
 BiocManager::install("ChemmineR")
 BiocManager::install("fmcsR")
 #install your libriaries
-library("ChemmineR") # Loads the 
+library("ChemmineR") 
 library("fmcsR")
 library("gplots")
 
